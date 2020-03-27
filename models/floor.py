@@ -1,7 +1,6 @@
 from models.database import *
+from models.section import Section
 
 
-class Floor(db.Entity):
-    number_floor = Required(int)
-    rooms_on_floor = Set('Room')
-    section = Required('Section')
+class Floor(Section):
+    rooms = Set('Room')

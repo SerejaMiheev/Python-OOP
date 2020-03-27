@@ -1,8 +1,7 @@
 from models.database import *
+from models.section import Section
 
 
-class Room(db.Entity):
-    number_room = Required(int)
+class Room(Section):
     equipments = Set('Equipment')
-    floor = Optional('Floor')
-    section = Optional('Section')
+    floor = Required('Floor')

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="300f5151-99be-418f-a43d-0ba5de030e9e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PythonOOPProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonOOPProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/binding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/binding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/camera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/equipment.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/equipment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/event.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/event.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/floor.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/floor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/person.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/room.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/room.py" afterDir="false" />
@@ -222,7 +216,8 @@
       <workItem from="1584960770285" duration="120000" />
       <workItem from="1584973837272" duration="725000" />
       <workItem from="1585200753929" duration="1400000" />
-      <workItem from="1585228533662" duration="9807000" />
+      <workItem from="1585228533662" duration="10230000" />
+      <workItem from="1585283874339" duration="4896000" />
     </task>
     <servers />
   </component>
@@ -246,7 +241,7 @@
     <SUITE FILE_PATH="coverage/PythonOOPProject$camera.coverage" NAME="camera Coverage Results" MODIFIED="1584088715876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/PythonOOPProject$event.coverage" NAME="event Coverage Results" MODIFIED="1584088763466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/PythonOOPProject$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1584277934122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my" />
-    <SUITE FILE_PATH="coverage/Python_OOP$binding.coverage" NAME="binding Coverage Results" MODIFIED="1585238847103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/Python_OOP$binding.coverage" NAME="binding Coverage Results" MODIFIED="1585287832091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/PythonOOPProject$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1584280286832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_models" />
     <SUITE FILE_PATH="coverage/PythonOOPProject$main.coverage" NAME="main Coverage Results" MODIFIED="1584355889791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/Python_OOP$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1584782543965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
