@@ -5,5 +5,5 @@ from models.database import *
 
 class Event(db.Entity):
     date = Required(datetime)
-    camera = Set('Camera')
+    camera = Required('Camera')
     person = Optional('Person')
