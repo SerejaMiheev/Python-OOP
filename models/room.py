@@ -4,4 +4,4 @@ from models.section import Section
 
 class Room(Section):
     equipments = Set('Equipment')
-    floor = Required('Floor')
+    floor = Optional('Floor')

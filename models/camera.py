@@ -3,5 +3,5 @@ from models.database import *
 
 class Camera(db.Entity):
     loc_record = Required(str, unique=True)
-    section = Required('Section')
+    section = Optional('Section')
     event = Set('Event')
