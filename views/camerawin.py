@@ -1,7 +1,7 @@
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.cameracontroller import CameraController
+from repository.camerarepository import CameraRepository
 from views.cameraaddwin import CameraAddDialog
 from views.cameradialog import Ui_Dialog
 
@@ -9,7 +9,7 @@ from views.cameradialog import Ui_Dialog
 class CameraDialog(QDialog):
     def __init__(self):
         super(CameraDialog, self).__init__()
-        self.cameras_controller = CameraController()
+        self.camera_repository = CameraRepository()
         self.initUI()
 
     def initUI(self):
@@ -26,7 +26,7 @@ class CameraDialog(QDialog):
         self.ui.pushButton_3.clicked.connect(self.click_del)
         self.ui.pushButton_4.clicked.connect(self.click_cancel)
 
-        cameras = self.cameras_controller.get_cameras()
+        cameras = self.camera_repository.get_cameras()
         self.ui.tableWidget.setRowCount(len(cameras))
         row = 0
         for i in cameras:
@@ -45,10 +45,10 @@ class CameraDialog(QDialog):
 
     def click_add(self):
         c_dict = {'id': -1, 'loc_record': ""}
-        self.cameras_controller.set_dict(c_dict)
-        camera_add = CameraAddDialog(self.cameras_controller)
+        self.camera_repository.set_dict(c_dict)
+        camera_add = CameraAddDialog(self.camera_repository)
         if(camera_add.exec()):
-            camera_d = self.cameras_controller.get_dict()
+            camera_d = self.camera_repository.get_dict()
             count_row = self.ui.tableWidget.rowCount()
             self.ui.tableWidget.setRowCount(count_row + 1)
             id_camera = QTableWidgetItem(str(camera_d['id']))
@@ -67,10 +67,10 @@ class CameraDialog(QDialog):
         if(len(edit_list)):
             select_row = self.ui.tableWidget.currentRow()
             edit_d = {'id': int(edit_list[0].text()), 'loc_record': edit_list[1].text()}
-            self.cameras_controller.set_dict(edit_d)
-            camera_edit = CameraAddDialog(self.cameras_controller)
+            self.camera_repository.set_dict(edit_d)
+            camera_edit = CameraAddDialog(self.camera_repository)
             if(camera_edit.exec()):
-                camera_d = self.cameras_controller.get_dict()
+                camera_d = self.camera_repository.get_dict()
                 id_camera = QTableWidgetItem(str(camera_d['id']))
                 id_camera.setFlags(
                     QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
@@ -86,7 +86,7 @@ class CameraDialog(QDialog):
         del_list = self.ui.tableWidget.selectedItems()
         if (len(del_list)):
             del_d = {'id': int(del_list[0].text()),  'loc_record': del_list[1].text()}
-            self.cameras_controller.del_camera(del_d)
+            self.camera_repository.del_camera(del_d)
             self.ui.tableWidget.removeRow(del_list[0].row())
 
     def click_cancel(self):

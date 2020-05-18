@@ -1,14 +1,14 @@
 from PyQt5.QtWidgets import QDialog
 
-from controllers.personcontroller import PersonController
+from repository.personrepository import PersonRepository
 from views.personadd import Ui_PersonAdd
 
 
 class PersonAddDialog(QDialog):
-    def __init__(self, person_controller: PersonController):
+    def __init__(self, person_repository: PersonRepository):
         super(PersonAddDialog, self).__init__()
-        self.persons_controller = person_controller
-        self.person_d = person_controller.get_dict()
+        self.person_repository = person_repository
+        self.person_d = person_repository.get_dict()
         self.initUI()
 
     def initUI(self):
@@ -28,14 +28,14 @@ class PersonAddDialog(QDialog):
         if (self.person_d['id'] == -1):
             if (len(c_person)):
                 self.person_d['fio'] = c_person
-                self.person_d['id'] = self.persons_controller.new_person(self.person_d)
-                self.persons_controller.set_dict(self.person_d)
+                self.person_d['id'] = self.person_repository.new_person(self.person_d)
+                self.person_repository.set_dict(self.person_d)
                 self.accept()
         else:
             if (len(c_person)):
                 self.person_d['fio'] = c_person
-                self.persons_controller.update_person(self.person_d)
-                self.persons_controller.set_dict(self.person_d)
+                self.person_repository.update_person(self.person_d)
+                self.person_repository.set_dict(self.person_d)
                 self.accept()
 
     def click_cancel(self):

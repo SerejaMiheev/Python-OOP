@@ -1,23 +1,23 @@
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.cameracontroller import CameraController
-from controllers.equipmentcontroller import EquipmentController
-from controllers.roomcontroller import RoomController
-from controllers.typecontroller import TypeController
+from repository.camerarepository import CameraRepository
+from repository.equipmentrepository import EquipmentRepository
+from repository.roomrepository import RoomRepository
+from repository.typerepository import TypeRepository
 from views.roomadd import Ui_RoomAdd
 
 LastStateRole = QtCore.Qt.UserRole
 
 
 class RoomAddDialog(QDialog):
-    def __init__(self, room_controller: RoomController):
+    def __init__(self, room_repository: RoomRepository):
         super(RoomAddDialog, self).__init__()
-        self.room_controller = room_controller
-        self.room_d = room_controller.get_dict()
-        self.equipment_controller = EquipmentController()
-        self.camera_controller = CameraController()
-        self.type_controller = TypeController()
+        self.room_repository = room_repository
+        self.room_d = room_repository.get_dict()
+        self.equipment_repository = EquipmentRepository()
+        self.camera_repository = CameraRepository()
+        self.type_repository = TypeRepository()
         self.initUI()
 
     def initUI(self):
@@ -35,12 +35,12 @@ class RoomAddDialog(QDialog):
             self.ui.lineEdit.setText(str(self.room_d['number']))
 
         if ((self.room_d['equipments'] == -1) or (len(self.room_d['equipments'])) == 0):
-            equipments = self.equipment_controller.get_equipments()
+            equipments = self.equipment_repository.get_equipments()
             self.ui.tableWidget.setRowCount(len(equipments))
             row = 0
             for i in equipments:
                 eq_column = QTableWidgetItem(
-                    self.type_controller.get_t(i['eq_type'])['type_of_equipment'] + ".  Кол-во: " + str(i['count']))
+                    self.type_repository.get_t(i['eq_type'])['type_of_equipment'] + ".  Кол-во: " + str(i['count']))
                 eq_column.setData(1000, i['id'])
                 eq_column.setFlags(QtCore.Qt.ItemIsUserCheckable |
                                    QtCore.Qt.ItemIsEnabled)
@@ -49,12 +49,12 @@ class RoomAddDialog(QDialog):
                 row += 1
 
         else:
-            equipments = self.equipment_controller.get_equipments()
+            equipments = self.equipment_repository.get_equipments()
             self.ui.tableWidget.setRowCount(len(equipments))
             row = 0
             for i in equipments:
                 eq_column = QTableWidgetItem(
-                    self.type_controller.get_t(i['eq_type'])['type_of_equipment'] + ".  Кол-во: " + str(i['count']))
+                    self.type_repository.get_t(i['eq_type'])['type_of_equipment'] + ".  Кол-во: " + str(i['count']))
                 eq_column.setData(1000, i['id'])
                 eq_column.setFlags(QtCore.Qt.ItemIsUserCheckable |
                                    QtCore.Qt.ItemIsEnabled)
@@ -67,7 +67,7 @@ class RoomAddDialog(QDialog):
                 row += 1
 
         if ((self.room_d['cameras'] == -1) or (len(self.room_d['cameras']) == 0)):
-            cameras = self.camera_controller.get_cameras()
+            cameras = self.camera_repository.get_cameras()
             self.ui.tableWidget_2.setRowCount(len(cameras))
             row = 0
             for i in cameras:
@@ -78,7 +78,7 @@ class RoomAddDialog(QDialog):
                 c_column.setCheckState(QtCore.Qt.Unchecked)
                 row += 1
         else:
-            cameras = self.camera_controller.get_cameras()
+            cameras = self.camera_repository.get_cameras()
             self.ui.tableWidget_2.setRowCount(len(cameras))
             row = 0
             for i in cameras:
@@ -133,8 +133,8 @@ class RoomAddDialog(QDialog):
                     self.room_d['cameras'] = self.c_list
                 else:
                     self.room_d['cameras'] = -1
-                r_d = self.room_controller.new_room(self.room_d)
-                self.room_controller.set_dict(r_d)
+                r_d = self.room_repository.new_room(self.room_d)
+                self.room_repository.set_dict(r_d)
                 self.accept()
         else:
             if (len(c_number)):
@@ -147,8 +147,8 @@ class RoomAddDialog(QDialog):
                     self.room_d['cameras'] = self.c_list
                 else:
                     self.room_d['cameras'] = -1
-                self.room_controller.update_room(self.room_d)
-                self.room_controller.set_dict(self.room_d)
+                self.room_repository.update_room(self.room_d)
+                self.room_repository.set_dict(self.room_d)
                 self.accept()
 
     def click_cancel(self):

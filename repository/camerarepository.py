@@ -3,7 +3,7 @@ from pony.orm import db_session, commit
 from models.binding import *
 
 
-class CameraController:
+class CameraRepository:
     def __init__(self):
         pass
 

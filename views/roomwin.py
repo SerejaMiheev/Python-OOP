@@ -1,7 +1,7 @@
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.roomcontroller import RoomController
+from repository.roomrepository import RoomRepository
 from views.roomaddwin import RoomAddDialog
 from views.roomsdialog import Ui_Rooms
 
@@ -9,7 +9,7 @@ from views.roomsdialog import Ui_Rooms
 class RoomsDialog(QDialog):
     def __init__(self):
         super(RoomsDialog, self).__init__()
-        self.room_controller = RoomController()
+        self.room_repository = RoomRepository()
         self.initUI()
 
     def initUI(self):
@@ -24,7 +24,7 @@ class RoomsDialog(QDialog):
         self.ui.pushButton_3.clicked.connect(self.click_del)
         self.ui.pushButton_4.clicked.connect(self.click_cancel)
 
-        rooms = self.room_controller.get_rooms()
+        rooms = self.room_repository.get_rooms()
         self.ui.tableWidget.setRowCount(len(rooms))
         row = 0
         for i in rooms:
@@ -38,10 +38,10 @@ class RoomsDialog(QDialog):
 
     def click_add(self):
         r_dict = {'id': -1, 'number': -1, 'equipments': -1, 'cameras': -1}
-        self.room_controller.set_dict(r_dict)
-        room_add = RoomAddDialog(self.room_controller)
+        self.room_repository.set_dict(r_dict)
+        room_add = RoomAddDialog(self.room_repository)
         if (room_add.exec()):
-            room_d = self.room_controller.get_dict()
+            room_d = self.room_repository.get_dict()
             count_row = self.ui.tableWidget.rowCount()
             self.ui.tableWidget.setRowCount(count_row + 1)
             num_room = QTableWidgetItem(str(room_d['number']))
@@ -55,11 +55,11 @@ class RoomsDialog(QDialog):
         edit_list = self.ui.tableWidget.selectedItems()
         if (len(edit_list)):
             select_row = self.ui.tableWidget.currentRow()
-            edit_d = self.room_controller.get_room({'id': edit_list[0].data(1000)})
-            self.room_controller.set_dict(edit_d)
-            room_edit = RoomAddDialog(self.room_controller)
+            edit_d = self.room_repository.get_room({'id': edit_list[0].data(1000)})
+            self.room_repository.set_dict(edit_d)
+            room_edit = RoomAddDialog(self.room_repository)
             if (room_edit.exec()):
-                room_d = self.room_controller.get_dict()
+                room_d = self.room_repository.get_dict()
                 num_room = QTableWidgetItem(str(room_d['number']))
                 num_room.setData(1000, room_d['id'])
                 num_room.setFlags(
@@ -71,7 +71,7 @@ class RoomsDialog(QDialog):
         del_list = self.ui.tableWidget.selectedItems()
         if (len(del_list)):
             del_d = {'id': del_list[0].data(1000)}
-            self.room_controller.del_room(del_d)
+            self.room_repository.del_room(del_d)
             self.ui.tableWidget.removeRow(del_list[0].row())
 
     def click_cancel(self):

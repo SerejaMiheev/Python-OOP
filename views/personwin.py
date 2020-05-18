@@ -1,7 +1,7 @@
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.personcontroller import PersonController
+from repository.personrepository import PersonRepository
 from views.perondialog import Ui_Dialog
 from views.personaddwin import PersonAddDialog
 
@@ -9,7 +9,7 @@ from views.personaddwin import PersonAddDialog
 class PersonDialog(QDialog):
     def __init__(self):
         super(PersonDialog, self).__init__()
-        self.persons_controller = PersonController()
+        self.person_repository = PersonRepository()
         self.initUI()
 
     def initUI(self):
@@ -24,7 +24,7 @@ class PersonDialog(QDialog):
         self.ui.pushButton_3.clicked.connect(self.click_del)
         self.ui.pushButton_4.clicked.connect(self.click_cancel)
 
-        persons = self.persons_controller.get_persons()
+        persons = self.person_repository.get_persons()
         self.ui.tableWidget.setRowCount(len(persons))
         row = 0
         for i in persons:
@@ -42,10 +42,10 @@ class PersonDialog(QDialog):
 
     def click_add(self):
         p_dict = {'id': -1, 'fio': ""}
-        self.persons_controller.set_dict(p_dict)
-        person_add = PersonAddDialog(self.persons_controller)
+        self.person_repository.set_dict(p_dict)
+        person_add = PersonAddDialog(self.person_repository)
         if (person_add.exec()):
-            person_d = self.persons_controller.get_dict()
+            person_d = self.person_repository.get_dict()
             count_row = self.ui.tableWidget.rowCount()
             self.ui.tableWidget.setRowCount(count_row + 1)
             id_person = QTableWidgetItem(str(person_d['id']))
@@ -64,10 +64,10 @@ class PersonDialog(QDialog):
         if(len(edit_list)):
             select_row = self.ui.tableWidget.currentRow()
             edit_d = {'id': int(edit_list[0].text()), 'fio': edit_list[1].text()}
-            self.persons_controller.set_dict(edit_d)
-            person_edit = PersonAddDialog(self.persons_controller)
+            self.person_repository.set_dict(edit_d)
+            person_edit = PersonAddDialog(self.person_repository)
             if (person_edit.exec()):
-                person_d = self.persons_controller.get_dict()
+                person_d = self.person_repository.get_dict()
                 id_person = QTableWidgetItem(str(person_d['id']))
                 id_person.setFlags(
                     QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
@@ -83,7 +83,7 @@ class PersonDialog(QDialog):
         del_list = self.ui.tableWidget.selectedItems()
         if (len(del_list)):
             del_d = {'id': int(del_list[0].text()), 'fio': del_list[1].text()}
-            self.persons_controller.del_person(del_d)
+            self.person_repository.del_person(del_d)
             self.ui.tableWidget.removeRow(del_list[0].row())
 
     def click_cancel(self):

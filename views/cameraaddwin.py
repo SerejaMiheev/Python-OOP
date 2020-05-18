@@ -1,14 +1,14 @@
 from PyQt5.QtWidgets import QDialog, QFileDialog
 
-from controllers.cameracontroller import CameraController
+from repository.camerarepository import CameraRepository
 from views.cameraadd import Ui_CameraAdd
 
 
 class CameraAddDialog(QDialog):
-    def __init__(self, camera_controller: CameraController):
+    def __init__(self, camera_repository: CameraRepository):
         super(CameraAddDialog, self).__init__()
-        self.camera_controller = camera_controller
-        self.camera_d = camera_controller.get_dict()
+        self.camera_repository = camera_repository
+        self.camera_d = camera_repository.get_dict()
         self.initUI()
 
     def initUI(self):
@@ -37,14 +37,14 @@ class CameraAddDialog(QDialog):
         if (self.camera_d['id'] == -1):
             if (len(c_dir)):
                 self.camera_d['loc_record'] = c_dir
-                self.camera_d['id'] = self.camera_controller.new_camera(self.camera_d)
-                self.camera_controller.set_dict(self.camera_d)
+                self.camera_d['id'] = self.camera_repository.new_camera(self.camera_d)
+                self.camera_repository.set_dict(self.camera_d)
                 self.accept()
         else:
             if (len(c_dir)):
                 self.camera_d['loc_record'] = c_dir
-                self.camera_controller.update_camera(self.camera_d)
-                self.camera_controller.set_dict(self.camera_d)
+                self.camera_repository.update_camera(self.camera_d)
+                self.camera_repository.set_dict(self.camera_d)
                 self.accept()
 
     def click_cancel(self):

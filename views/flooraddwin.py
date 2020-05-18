@@ -1,21 +1,21 @@
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.cameracontroller import CameraController
-from controllers.floorcontroller import FloorController
-from controllers.roomcontroller import RoomController
+from repository.camerarepository import CameraRepository
+from repository.floorrepository import FloorRepository
+from repository.roomrepository import RoomRepository
 from views.flooradd import Ui_FloorAdd
 
 LastStateRole = QtCore.Qt.UserRole
 
 
 class FloorAddDialog(QDialog):
-    def __init__(self, floor_controller: FloorController):
+    def __init__(self, floor_repository: FloorRepository):
         super(FloorAddDialog, self).__init__()
-        self.floor_controller = floor_controller
-        self.floor_d = floor_controller.get_dict()
-        self.camera_controller = CameraController()
-        self.room_controller = RoomController()
+        self.floor_repository = floor_repository
+        self.floor_d = floor_repository.get_dict()
+        self.camera_repository = CameraRepository()
+        self.room_repository = RoomRepository()
         self.initUI()
 
     def initUI(self):
@@ -33,7 +33,7 @@ class FloorAddDialog(QDialog):
             self.ui.lineEdit.setText(str(self.floor_d['number']))
 
         if ((self.floor_d['rooms'] == -1) or (len(self.floor_d['rooms'])) == 0):
-            rooms = self.room_controller.get_rooms()
+            rooms = self.room_repository.get_rooms()
             self.ui.tableWidget.setRowCount(len(rooms))
             row = 0
             for i in rooms:
@@ -46,7 +46,7 @@ class FloorAddDialog(QDialog):
                 row += 1
 
         else:
-            rooms = self.room_controller.get_rooms()
+            rooms = self.room_repository.get_rooms()
             self.ui.tableWidget.setRowCount(len(rooms))
             row = 0
             for i in rooms:
@@ -63,7 +63,7 @@ class FloorAddDialog(QDialog):
                 row += 1
 
         if ((self.floor_d['cameras'] == -1) or (len(self.floor_d['cameras']) == 0)):
-            cameras = self.camera_controller.get_cameras()
+            cameras = self.camera_repository.get_cameras()
             self.ui.tableWidget_2.setRowCount(len(cameras))
             row = 0
             for i in cameras:
@@ -74,7 +74,7 @@ class FloorAddDialog(QDialog):
                 c_column.setCheckState(QtCore.Qt.Unchecked)
                 row += 1
         else:
-            cameras = self.camera_controller.get_cameras()
+            cameras = self.camera_repository.get_cameras()
             self.ui.tableWidget_2.setRowCount(len(cameras))
             row = 0
             for i in cameras:
@@ -129,8 +129,8 @@ class FloorAddDialog(QDialog):
                     self.floor_d['cameras'] = self.c_list
                 else:
                     self.floor_d['cameras'] = -1
-                f_d = self.floor_controller.new_floor(self.floor_d)
-                self.floor_controller.set_dict(f_d)
+                f_d = self.floor_repository.new_floor(self.floor_d)
+                self.floor_repository.set_dict(f_d)
                 self.accept()
         else:
             if (len(c_number)):
@@ -143,8 +143,8 @@ class FloorAddDialog(QDialog):
                     self.floor_d['cameras'] = self.c_list
                 else:
                     self.floor_d['cameras'] = -1
-                self.floor_controller.update_floor(self.floor_d)
-                self.floor_controller.set_dict(self.floor_d)
+                self.floor_repository.update_floor(self.floor_d)
+                self.floor_repository.set_dict(self.floor_d)
                 self.accept()
 
     def click_cancel(self):

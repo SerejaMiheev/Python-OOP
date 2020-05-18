@@ -2,96 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="300f5151-99be-418f-a43d-0ba5de030e9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/cameracontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/equipmentcontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/eventcontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/floorcontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/personcontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/roomcontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/typecontroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/createdb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-5.14.2.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-5.14.2.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-5.14.2.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-5.14.2.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-5.14.2.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtCore.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtDBus.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtGui.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtNetwork.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtOpenGL.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtPrintSupport.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtSql.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtTest.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtWidgets.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtXml.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/__init__.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/sip.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5/sip.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_sip-12.7.2.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_sip-12.7.2.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_sip-12.7.2.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_sip-12.7.2.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_sip-12.7.2.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.14.2.0-py3.8.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.14.2.0-py3.8.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.14.2.0-py3.8.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.14.2.0-py3.8.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.14.2.0-py3.8.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/cameraadd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/cameraadd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/cameraaddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/cameradialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/cameradialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/camerawin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/equipmentsaddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/equipmentsdialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/equipmentsdialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/equipmentswin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/equippmentadd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/equippmentadd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/eventadd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/eventadd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/eventaddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/eventdialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/eventdialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/eventwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/flooradd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/flooradd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/flooraddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/floordialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/floordialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/floorwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mainwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mainwindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mainwindow.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/perondialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/perondialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/personadd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/personadd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/personaddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/personwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/roomadd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/roomadd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/roomaddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/roomsdialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/roomsdialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/roomwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/typeadd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/typeadd.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/typeaddwin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/typesdialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/typesdialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/typewin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/binding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/binding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/camera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/room.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/room.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/cameracontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/camerarepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/equipmentcontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/equipmentrepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/eventcontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/eventrepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/floorcontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/floorrepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/personcontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/personrepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/roomcontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/roomrepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/typecontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/typerepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cameraaddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/cameraaddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/camerawin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/camerawin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/equipmentsaddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/equipmentsaddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/equipmentswin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/equipmentswin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/eventaddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/eventaddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/eventwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/eventwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/flooraddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/flooraddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/floorwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/floorwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/personaddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/personaddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/personwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/personwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/roomaddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/roomaddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/roomwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/roomwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/typeaddwin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/typeaddwin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/typewin.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/typewin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="UML Class" />
         <option value="Python Script" />
       </list>
     </option>
@@ -126,13 +60,16 @@
   <component name="ProjectId" id="1YiVEupkg3gzPg8eoKFvFVMqiE2" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="J:\PythonProject\Python-OOP\main" />
+      <recent name="J:\PythonProject\Python-OOP" />
       <recent name="A:\PythonOOPProject\main" />
       <recent name="A:\PythonOOPProject\models" />
     </key>
@@ -232,7 +169,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/main.py" />
+      <option name="SCRIPT_NAME" value="J:\PythonProject\Python-OOP\main\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -332,7 +269,17 @@
       <workItem from="1587993449414" duration="689000" />
       <workItem from="1587996492520" duration="15000" />
       <workItem from="1587999410388" duration="9000" />
-      <workItem from="1588061825314" duration="2172000" />
+      <workItem from="1588061825314" duration="2457000" />
+      <workItem from="1588066442088" duration="436000" />
+      <workItem from="1588068508386" duration="47000" />
+      <workItem from="1589192059290" duration="2663000" />
+      <workItem from="1589194738501" duration="401000" />
+      <workItem from="1589195150197" duration="3310000" />
+      <workItem from="1589272419290" duration="7973000" />
+      <workItem from="1589445414332" duration="5784000" />
+      <workItem from="1589524450961" duration="4584000" />
+      <workItem from="1589733873379" duration="1557000" />
+      <workItem from="1589790953421" duration="613000" />
     </task>
     <servers />
   </component>
@@ -365,14 +312,14 @@
     <SUITE FILE_PATH="coverage/Python_OOP$mainwindow.coverage" NAME="mainwindow Coverage Results" MODIFIED="1587030572176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$binding.coverage" NAME="binding Coverage Results" MODIFIED="1587484276639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/Python_OOP$mainwin.coverage" NAME="mainwin Coverage Results" MODIFIED="1587653399564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
-    <SUITE FILE_PATH="coverage/Python_OOP$createdb.coverage" NAME="createdb Coverage Results" MODIFIED="1587994126180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/Python_OOP$createdb.coverage" NAME="createdb Coverage Results" MODIFIED="1589192134367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/Python_OOP$personwindow.coverage" NAME="personwindow Coverage Results" MODIFIED="1587041186657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$typeaddwin.coverage" NAME="typeaddwin Coverage Results" MODIFIED="1587226982231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$typewin.coverage" NAME="typewin Coverage Results" MODIFIED="1587226609302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$personwin.coverage" NAME="personwin Coverage Results" MODIFIED="1587315965219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$perondialog.coverage" NAME="perondialog Coverage Results" MODIFIED="1587040365232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$personadd.coverage" NAME="personadd Coverage Results" MODIFIED="1586950225812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
-    <SUITE FILE_PATH="coverage/Python_OOP$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1588064592729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/Python_OOP$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1589280330253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PythonOOPProject$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1584356020731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/Python_OOP$camerawindow.coverage" NAME="camerawindow Coverage Results" MODIFIED="1586951428607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/Python_OOP$equipmentsdialog.coverage" NAME="equipmentsdialog Coverage Results" MODIFIED="1587225048278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />

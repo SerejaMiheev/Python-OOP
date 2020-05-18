@@ -1,7 +1,7 @@
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.floorcontroller import FloorController
+from repository.floorrepository import FloorRepository
 from views.flooraddwin import FloorAddDialog
 from views.floordialog import Ui_Floor
 
@@ -9,7 +9,7 @@ from views.floordialog import Ui_Floor
 class FloorDialog(QDialog):
     def __init__(self):
         super(FloorDialog, self).__init__()
-        self.floor_controller = FloorController()
+        self.floor_repository = FloorRepository()
         self.initUI()
 
     def initUI(self):
@@ -25,7 +25,7 @@ class FloorDialog(QDialog):
         self.ui.pushButton_4.clicked.connect(self.click_edit)
         self.ui.pushButton_5.clicked.connect(self.click_cancel)
 
-        floors = self.floor_controller.get_floors()
+        floors = self.floor_repository.get_floors()
         self.ui.tableWidget.setRowCount(len(floors))
         row = 0
         for i in floors:
@@ -49,10 +49,10 @@ class FloorDialog(QDialog):
 
     def click_add(self):
         f_dict = {'id': -1, 'number': -1, 'rooms': -1, 'cameras': -1}
-        self.floor_controller.set_dict(f_dict)
-        floor_add = FloorAddDialog(self.floor_controller)
+        self.floor_repository.set_dict(f_dict)
+        floor_add = FloorAddDialog(self.floor_repository)
         if (floor_add.exec()):
-            floor_d = self.floor_controller.get_dict()
+            floor_d = self.floor_repository.get_dict()
             count_row = self.ui.tableWidget.rowCount()
             self.ui.tableWidget.setRowCount(count_row + 1)
             num_floor = QTableWidgetItem(str(floor_d['number']))
@@ -82,18 +82,18 @@ class FloorDialog(QDialog):
         del_list = self.ui.tableWidget.selectedItems()
         if (len(del_list)):
             del_d = {'id': del_list[0].data(1000)}
-            self.floor_controller.del_floor(del_d)
+            self.floor_repository.del_floor(del_d)
             self.ui.tableWidget.removeRow(del_list[0].row())
 
     def click_edit(self):
         edit_list = self.ui.tableWidget.selectedItems()
         if (len(edit_list)):
             select_row = self.ui.tableWidget.currentRow()
-            edit_d = self.floor_controller.get_floor({'id': edit_list[0].data(1000)})
-            self.floor_controller.set_dict(edit_d)
-            floor_edit = FloorAddDialog(self.floor_controller)
+            edit_d = self.floor_repository.get_floor({'id': edit_list[0].data(1000)})
+            self.floor_repository.set_dict(edit_d)
+            floor_edit = FloorAddDialog(self.floor_repository)
             if (floor_edit.exec()):
-                floor_d = self.floor_controller.get_dict()
+                floor_d = self.floor_repository.get_dict()
                 num_floor = QTableWidgetItem(str(floor_d['number']))
                 num_floor.setData(1000, floor_d['id'])
                 num_floor.setFlags(

@@ -1,8 +1,8 @@
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem
 
-from controllers.eventcontroller import EventController
-from controllers.personcontroller import PersonController
+from repository.eventrepository import EventRepository
+from repository.personrepository import PersonRepository
 from views.eventaddwin import EventAddDialog
 from views.eventdialog import Ui_Events
 
@@ -10,8 +10,8 @@ from views.eventdialog import Ui_Events
 class EventDialog(QDialog):
     def __init__(self):
         super(EventDialog, self).__init__()
-        self.event_controller = EventController()
-        self.person_controller = PersonController()
+        self.event_repository = EventRepository()
+        self.person_repository = PersonRepository()
         self.initUI()
 
     def initUI(self):
@@ -27,7 +27,7 @@ class EventDialog(QDialog):
         self.ui.pushButton_2.clicked.connect(self.click_del)
         self.ui.pushButton_3.clicked.connect(self.click_cancel)
 
-        event = self.event_controller.get_events()
+        event = self.event_repository.get_events()
         self.ui.tableWidget.setRowCount(len(event))
         row = 0
         for i in event:
@@ -43,7 +43,7 @@ class EventDialog(QDialog):
             )
             self.ui.tableWidget.setItem(row, 1, e_camera)
             if (i['person'] != None):
-                e_person = QTableWidgetItem(self.person_controller.get_person({'id': i['person']})['fio'])
+                e_person = QTableWidgetItem(self.person_repository.get_person({'id': i['person']})['fio'])
                 e_person.setFlags(
                     QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
                 )
@@ -58,10 +58,10 @@ class EventDialog(QDialog):
 
     def click_add(self):
         e_dict = {'id': -1, 'camera': -1, 'person': -1}
-        self.event_controller.set_dict(e_dict)
-        event_add = EventAddDialog(self.event_controller)
+        self.event_repository.set_dict(e_dict)
+        event_add = EventAddDialog(self.event_repository)
         if (event_add.exec()):
-            event_d = self.event_controller.get_dict()
+            event_d = self.event_repository.get_dict()
             count_row = self.ui.tableWidget.rowCount()
             self.ui.tableWidget.setRowCount(count_row + 1)
             e_date = QTableWidgetItem(str(event_d['date']))
@@ -76,7 +76,7 @@ class EventDialog(QDialog):
             )
             self.ui.tableWidget.setItem(count_row, 1, e_camera)
             if(event_d['person'] != -1):
-                e_person = QTableWidgetItem(self.person_controller.get_person({'id': event_d['person']})['fio'])
+                e_person = QTableWidgetItem(self.person_repository.get_person({'id': event_d['person']})['fio'])
                 e_person.setData(1000, event_d['person'])
                 e_person.setFlags(
                     QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
@@ -93,7 +93,7 @@ class EventDialog(QDialog):
         del_list = self.ui.tableWidget.selectedItems()
         if (len(del_list)):
             del_d = {'id': del_list[0].data(1000)}
-            self.event_controller.del_event(del_d)
+            self.event_repository.del_event(del_d)
             self.ui.tableWidget.removeRow(del_list[0].row())
 
     def click_cancel(self):

@@ -3,7 +3,7 @@ from pony.orm import db_session, commit
 from models.binding import *
 
 
-class PersonController:
+class PersonRepository:
     def __init__(self):
         pass
 

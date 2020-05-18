@@ -5,7 +5,7 @@ from pony.orm import db_session, commit
 from models.binding import *
 
 
-class EventController:
+class EventRepository:
     def __init__(self):
         pass
 

@@ -1,14 +1,14 @@
 from PyQt5.QtWidgets import QDialog
 
-from controllers.typecontroller import TypeController
+from repository.typerepository import TypeRepository
 from views.typeadd import Ui_TypeAdd
 
 
 class TypeAddDialog(QDialog):
-    def __init__(self, type_controller: TypeController):
+    def __init__(self, type_repository: TypeRepository):
         super(TypeAddDialog, self).__init__()
-        self.type_controller = type_controller
-        self.type_d = type_controller.get_dict()
+        self.type_repository = type_repository
+        self.type_d = type_repository.get_dict()
         self.initUI()
 
     def initUI(self):
@@ -28,14 +28,14 @@ class TypeAddDialog(QDialog):
         if (self.type_d['id'] == -1):
             if (len(c_type)):
                 self.type_d['type_of_equipment'] = c_type
-                self.type_d['id'] = self.type_controller.new_type(self.type_d)
-                self.type_controller.set_dict(self.type_d)
+                self.type_d['id'] = self.type_repository.new_type(self.type_d)
+                self.type_repository.set_dict(self.type_d)
                 self.accept()
         else:
             if (len(c_type)):
                 self.type_d['type_of_equipment'] = c_type
-                self.type_controller.update_type(self.type_d)
-                self.type_controller.set_dict(self.type_d)
+                self.type_repository.update_type(self.type_d)
+                self.type_repository.set_dict(self.type_d)
                 self.accept()
 
     def click_cancel(self):
